@@ -4,61 +4,7 @@ This simulator implements the **Least Recently Used (LRU)** cache replacement po
 
 When the cache is full and a new memory address must be stored, the system removes the address that has not been used for the longest time.
 
-Example:
-Address 0x12 → MISS
-Cache: ['0x12']
-
-Address 0x2f → MISS
-Cache: ['0x12', '0x2f']
-
-Address 0x12 → HIT
-Cache: ['0x2f', '0x12']
-
-Address 0x8a → MISS
-Cache: ['0x2f', '0x12', '0x8a']
-
-Address 0x2f → HIT
-Cache: ['0x12', '0x8a', '0x2f']
-
-Address 0x44 → MISS
-Cache: ['0x12', '0x8a', '0x2f', '0x44']
-
-Address 0x12 → HIT
-Cache: ['0x8a', '0x2f', '0x44', '0x12']
-
-Address 0x8a → HIT
-Cache: ['0x2f', '0x44', '0x12', '0x8a']
-
-Address 0x90 → MISS
-Evicting 0x2f (LRU)
-Cache: ['0x44', '0x12', '0x8a', '0x90']
-
-Address 0x44 → HIT
-Cache: ['0x12', '0x8a', '0x90', '0x44']
-
-Address 0x2f → MISS
-Evicting 0x12 (LRU)
-Cache: ['0x8a', '0x90', '0x44', '0x2f']
-
-Address 0x90 → HIT
-Cache: ['0x8a', '0x44', '0x2f', '0x90']
-
-Address 0x12 → MISS
-Evicting 0x8a (LRU)
-Cache: ['0x44', '0x2f', '0x90', '0x12']
-
-Address 0x33 → MISS
-Evicting 0x44 (LRU)
-Cache: ['0x2f', '0x90', '0x12', '0x33']
-
-Address 0x12 → HIT
-Cache: ['0x2f', '0x90', '0x33', '0x12']
-
-=== CACHE STATISTICS ===
-Total accesses : 15
-Cache hits     : 7
-Cache misses   : 8
-Hit rate       : 46.67%
 
 
-This demonstrates how CPU caches improve performance by storing frequently used memory addresses.
+
+This project demonstrates how CPU caches improve performance by storing frequently used memory addresses.

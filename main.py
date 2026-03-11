@@ -48,10 +48,13 @@ def generate_addresses(count):
 
 
 def main():
-
     cache = CacheSimulator(cache_size=4)
 
-    addresses = generate_addresses(15)
+    addresses = [
+        "0x12", "0x2f", "0x12", "0x8a", "0x2f",
+        "0x44", "0x12", "0x8a", "0x90", "0x44",
+        "0x2f", "0x90", "0x12", "0x33", "0x12"
+    ]
 
     print("=== MEMORY ACCESS SIMULATION ===\n")
 

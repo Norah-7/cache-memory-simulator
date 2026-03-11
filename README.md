@@ -1,0 +1,1 @@
+A Python-based CPU cache simulator that models how a processor cache responds to memory accesses. The program tracks cache hits, cache misses, and calculates hit rate statistics to illustrate basic computer architecture concepts.
